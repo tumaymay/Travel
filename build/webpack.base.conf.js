@@ -8,16 +8,16 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
-  loader: 'eslint-loader',
-  enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
-  options: {
-    formatter: require('eslint-friendly-formatter'),
-    emitWarning: !config.dev.showEslintErrorsInOverlay
-  }
-})
+//const createLintingRule = () => ({
+ // test: /\.(js|vue)$/,
+  //loader: 'eslint-loader',
+  //enforce: 'pre',
+  //include: [resolve('src'), resolve('test')],
+  //options: {
+    //formatter: require('eslint-friendly-formatter'),
+    //emitWarning: !config.dev.showEslintErrorsInOverlay
+  //}
+//})
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -35,11 +35,12 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': resolve('src'),
+      'styles':resolve('src/assets/styles')
     }
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      //...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',

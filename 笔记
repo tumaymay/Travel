@@ -1,0 +1,26 @@
+1.package.json:放依赖包的地方
+2.package-lock.json:锁文件，帮助我们确定安装的第三方包的版本
+3.LICENSE：开源协议的说明
+4.index.html:项目默认的首页的模板文件
+5.postcssrc.js:对postcss的配置项
+6..gitignore:配置一些不想提交到线上仓库的文件。
+7.eslintrc.js:配置代码的规范
+8.eslintignore:里面的文件不受代码规范的控制
+9.editorconfig:配置编辑器的一些语法
+10..babelrc:配置能被浏览器编译的一些语法
+11.static:静态资源
+12.node_modules:项目依赖的一些第三方的node的包
+13.src:源代码
+    #main.js:整个项目的入口文件
+    #App.vue:项目最原始的根组件
+    #router
+        #index.js:项目路由
+    #components:项目的一些小组件
+    #assets：图片类资源
+14.config:项目的配置文件
+    #index.js:基础配置信息
+    #dev.env.js:开发环境的配置信息
+    #prod.env.js:线上环境的配置信息
+15.build：项目打包的一些webpack的一些配置内容
+
+
