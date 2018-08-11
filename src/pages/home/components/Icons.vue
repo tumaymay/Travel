@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -16,50 +16,16 @@
 <script>
 export default {
     name:'HomeIcons',
+    props:{
+        iconList:Array,
+    },
     data(){
         return{
-            iconList:[{
-                id:'001',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc:'景点门票景点门票'
-            },
-            {
-                id:'002',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-                desc:'水上乐园'
-            },
-            {
-                id:'003',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-                desc:'游乐场'
-            },
-            {
-                id:'004',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
-                desc:'海洋馆'
-            },
-            {
-                id:'005',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                desc:'动植物园'
-            },
-            {
-                id:'006',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-                desc:'玩转长隆'
-            },
-            {
-                id:'007',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png',
-                desc:'城市观光'
-            },
-            {
-                id:'008',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/27/dac2bcf9added702.png',
-                desc:'海滨沙滩'
-            }],   
+        swiperOption:{
+            autoplay:false,
         }
-    },
+    }
+  },
     computed: {
                 pages () {
                     const pages = []
