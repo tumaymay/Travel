@@ -57,11 +57,6 @@ export default {
                 id:'008',
                 imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/27/dac2bcf9added702.png',
                 desc:'海滨沙滩'
-            },
-            {
-                id:'009',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc:'景点门票'
             }],   
         }
     },
@@ -85,10 +80,11 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
-.icons
-    overflow :hidden
+.icons >>> .swiper-container
     height :0
     padding-bottom :50%
+.icons
+    
     .icon 
         width :25%
         padding-bottom :25%
@@ -102,7 +98,6 @@ export default {
             left :0
             right :0
             bottom :.44rem
-            background :#eee
             box-sizing :border-box
             padding :.1rem
             .icon-img-content
