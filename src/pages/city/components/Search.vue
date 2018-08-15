@@ -8,7 +8,7 @@
             <li class="search-item border-bottom"
             v-for="item of list"
              :key="item.id"
-             @click="handleCityClick(item.name)">{{item.name}}</li>
+              @click="handleCityClick(item.name)">{{item.name}}</li>
             <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
         </ul>
     </div>
@@ -28,6 +28,7 @@ export default {
             console.log(city)
             this.$store.commit('changeCity',city)
             this.$router.push('./')
+            this.keyWord=''
            
         }
     },
@@ -44,7 +45,9 @@ export default {
         }
     },
     mounted(){
-        this.scroll = new Bscroll(this.$refs.search)
+        this.scroll = new Bscroll(this.$refs.search,{
+            click :true
+        })
     },
     watch:{
         keyWord(){

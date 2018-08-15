@@ -25,13 +25,13 @@ export default {
         }
     },
     activated(){
-        console.log(111)
         window.addEventListener('scroll',this.handleScroll)
-        //alert(111)
+    },
+    deactivated(){
+        window.removeEventListener('scroll',this.handleScroll)//解绑
     },
     methods:{
         handleScroll(){
-            console.log(111)
             const top = document.documentElement.scrollTop
             if(top > 60){
                 let opacity = top/140
@@ -63,6 +63,7 @@ export default {
     .header-abs-icon
         color :#fff
 .header-fixed
+    z-index :2
     position :fixed
     top :0
     left :0

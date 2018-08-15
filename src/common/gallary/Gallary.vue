@@ -15,6 +15,9 @@
 
 export default {
     name:'CommonGallary',
+    props:{
+        imgs:Array
+    },
     data(){
         return{
            swiperOption:{

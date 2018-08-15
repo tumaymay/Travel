@@ -23,5 +23,8 @@ export default new Router({
       name:'detail',
       component :Detail
     }
-  ]
+  ],
+  scrollBehavior (to,from,savedPosition) {  //消除滚动页面对其他页面的影响
+    return{x :0,y: 0}
+  }
 })
